@@ -60,9 +60,7 @@ def listar_manifestacoes(tipo=''):
     print('')
 
 
-tipo = ''
 while True:
-
     """Abaixo, está o menu da ouvidoria."""
 
     print('Ouvidoria - Universidade ABC\n')
@@ -95,7 +93,8 @@ while True:
         """A variável tipo só aceita 3 valores:
         Sugestão, Reclamação ou Elogio."""
 
-        while tipo != 'Sugestão' != 'Reclamação' != 'Elogio':
+        tipo = ''
+        while tipo != 'Sugestão' and tipo != 'Reclamação' and tipo != 'Elogio':
             tipo = input('Digite o tipo da manifestação (Sugestão, Reclamação ou Elogio): ').strip().title()
         descricao = input('Digite a descrição da manifestação: ').strip().capitalize()
 
